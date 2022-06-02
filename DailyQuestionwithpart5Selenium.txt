@@ -1,0 +1,42 @@
+1)What Are The Execptions Thrown By Alert,Frame ,Windows ?
+      NoSuchFrameException
+	UnhandledAlertException
+	NoAlertPresentException	
+	NoSuchWindowException
+ 
+2) What are the three types of alerts? Various actions that can be performed on an alert? Can you take screen shot of an alert?
+   *Simple alert
+	*cofirmation alert
+	*Prompt alert
+	 Methods 
+	-accept()
+	-dismiss()
+	-getText()
+	-sendKeys()
+	Screenshot cannot be taken in alert.
+
+3) How to handle the frame in Selenium Webdriver?
+   switchTo() method is used to handle in frame
+
+4) Assume you are within a frame. Explain how can you switch back from a frame.
+   switchTo().parentframe().
+
+5) Explain the difference between getWindowHandle and getWindowHandles.
+   getWindowHandle is parent window
+   getWindowHandles is child window
+
+6) How will you close all the windows open except the parent window?
+    driver.close() method is used
+
+7) To close an alert, use either dismiss (negative) or accept (positive) method.
+   driver.findElement(By.xpath("//button[text()='Confirm Box']")).click();
+	driver.switchTo().alert().accept();
+	driver.findElement(By.xpath("//button[text()='Confirm Box']")).click();
+	driver.switchTo().alert().dismiss();
+
+8)How To Move The Control To Last Window Opened By Selenium?
+   By using get method we can move to last window opened by selenium
+
+9)Different between parentframe and defaultcontent?
+   Parentframe is used to switch control to parent frame
+	defaultcontent is used to overcome pop-ups and switch to default content in window.	
